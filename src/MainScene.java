@@ -14,6 +14,7 @@ public class MainScene extends JPanel {
     private static final int SIZE_GAME_OVER = 100;
     private static int gameTime = 90;
     private static final int SIZE_TIMER = 20;
+    private static int pointToKill=10;
 
 
     private RecordScore recordScore;
@@ -113,10 +114,9 @@ public class MainScene extends JPanel {
         for (Alien alien1 : aliens) {
             this.alienRect = alien1.getRectangle();
             if (this.shotRect.intersects(this.alienRect)) {
-                point += 10;
-                alien1.destroy();
+                point += pointToKill;
                 aliens.remove(alien1);
-                shot.destroy();
+                shot.updateShot();
                 stopShot();
                 repaint();
                 break;
@@ -157,6 +157,7 @@ public class MainScene extends JPanel {
     public static void difficultyLevel(int levelDiff) {
         if (levelDiff == 2) {
             gameTime = 60;
+            pointToKill=20;
         }
     }
     public void paintComponent(Graphics graphics) {

@@ -33,7 +33,7 @@ public class Shot {
         return this.rectangle;
     }
 
-    public void destroy() {
+    public void updateShot() {
         this.y = 450;
 
     }

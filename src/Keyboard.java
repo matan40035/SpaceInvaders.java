@@ -45,9 +45,7 @@ public class Keyboard implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             this.mainLogin.start();
         }
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            this.mainScene.stopShot();
-        }
+
 
     }
 

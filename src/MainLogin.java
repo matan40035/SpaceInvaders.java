@@ -9,6 +9,7 @@ public class MainLogin extends JPanel {
     private final int HEIGHT = 600;
     private boolean start = false;
     private Font font = new Font("Arial", Font.BOLD, SIZE_FONT);
+    private Font fontLevel = new Font("Arial", Font.BOLD, SIZE_FONT*2);
     public MainLogin() {
         this.setSize(WIDTH, HEIGHT);
         this.setBackground(Color.black);
@@ -31,7 +32,8 @@ public class MainLogin extends JPanel {
         graphics2D.setFont(font);
         graphics2D.drawString("Welcome to the game! Use the left and right arrow keys to move your spaceship. Press the spacebar to shoot.", 50, 400);
         graphics2D.drawString("Good luck!", 350, 430);
-        graphics2D.drawString("Press 1 for Easy or 2 for Hard ", 290, 470);
+        graphics2D.setFont(fontLevel);
+        graphics2D.drawString("Press 1 for Easy or 2 for Hard ", 200, 200);
         repaint();
     }
 }
